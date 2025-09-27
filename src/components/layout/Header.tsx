@@ -13,18 +13,18 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center glow-primary">
+              <img src="logoPioneerX.png" className="w-10 h-10" />
+              {/* <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center glow-primary">
                 <Sparkles className="w-6 h-6 text-primary-foreground" />
-              </div>
+              </div> */}
               <div className="absolute -top-1 -right-1">
-                <Badge variant="secondary" className="text-xs bg-gradient-accent text-accent-foreground px-2 py-0.5">
+                {/* <Badge variant="secondary" className="text-xs bg-gradient-accent text-accent-foreground px-2 py-0.5">
                   AI
-                </Badge>
+                </Badge> */}
               </div>
             </div>
             <div>
               <h1 className="text-xl font-bold text-gradient-hero">PioneerX</h1>
-              <p className="text-xs text-muted-foreground">Startup Ecosystem</p>
             </div>
           </div>
 

@@ -255,12 +255,12 @@
     background-clip: text;
   }
 
-  .text-gradient-tech {
+  /* .text-gradient-tech {
     background: var(--gradient-tech);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
+  } */
 }
 
 @layer utilities {

@@ -10,15 +10,25 @@ PioneerX is a revolutionary networking ecosystem designed to solve the critical 
 
 ---
 
-## The Problem 🎯
+## Getting Started
 
-The startup landscape is fraught with challenges. **90% of startups fail** due to a combination of factors:
-* Poor pitch preparation and strategy.
-* Lack of access to quality, relevant mentorship.
-* Biased and inefficient investor matching processes.
-* Fraudulent claims of traction and key metrics.
+*(This is a conceptual project. The following section is a placeholder for future development.)*
 
-Meanwhile, investors are overwhelmed by low-quality deal flow and struggle to discover high-potential ventures outside of their traditional, often insular, networks.
+To get a local copy up and running, follow these simple steps.
+
+### Installation
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/roguesehaj/PioneerX.git
+    ```
+2.  Install NPM packages
+    ```sh
+    npm i
+    ```
+3.  Run the application
+    ```sh
+    npm run dev
+    ```
 
 ---
 
@@ -72,30 +82,16 @@ PioneerX is highly achievable and built on a foundation of proven, modern techno
 
 ---
 
-## Getting Started
+## The Problem 🎯
 
-*(This is a conceptual project. The following section is a placeholder for future development.)*
+The startup landscape is fraught with challenges. **90% of startups fail** due to a combination of factors:
+* Poor pitch preparation and strategy.
+* Lack of access to quality, relevant mentorship.
+* Biased and inefficient investor matching processes.
+* Fraudulent claims of traction and key metrics.
 
-To get a local copy up and running, follow these simple steps.
+Meanwhile, investors are overwhelmed by low-quality deal flow and struggle to discover high-potential ventures outside of their traditional, often insular, networks.
 
-### Prerequisites
-* Node.js
-* Truffle Suite
-* Python 3.x
-
-### Installation
-1.  Clone the repo
-    ```sh
-    git clone [https://github.com/your_username/PioneerX.git](https://github.com/roguesehaj/PioneerX.git)
-    ```
-2.  Install NPM packages
-    ```sh
-    npm i
-    ```
-3.  Run the application
-    ```sh
-    npm run dev
-    ```
 
 ---
 

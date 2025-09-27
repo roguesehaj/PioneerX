@@ -143,13 +143,13 @@ export function FeaturesSection() {
           <div className="relative max-w-4xl mx-auto">
             {/* Central Hub */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="w-32 h-32 bg-gradient-hero rounded-full flex items-center justify-center glow-primary animate-pulse-glow">
+              {/* <div className="w-32 h-32 bg-gradient-hero rounded-full flex items-center justify-center glow-primary animate-pulse-glow">
                 <Rocket className="w-12 h-12 text-primary-foreground" />
-              </div>
-              <div className="text-center mt-4">
+              </div> */}
+              {/* <div className="text-center mt-4">
                 <div className="text-lg font-bold text-gradient-hero">PioneerX</div>
                 <div className="text-sm text-muted-foreground">Core Platform</div>
-              </div>
+              </div> */}
             </div>
 
             {/* Surrounding Features */}

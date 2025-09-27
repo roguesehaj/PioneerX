@@ -97,8 +97,3 @@ Contributions are what make the open-source community such an amazing place to l
 
 Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
----
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.

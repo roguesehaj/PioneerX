@@ -1,15 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Sparkles, TrendingUp, Shield, Zap, Users } from "lucide-react";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
+import { TypewriterText } from "@/components/ui/typewriter-text";
+import { useState } from "react";
+import {
+  ArrowRight,
+  Sparkles,
+  TrendingUp,
+  Shield,
+  Zap,
+  Users,
+} from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 export function HeroSection() {
+  const [activeTypewriter, setActiveTypewriter] = useState<
+    "first" | "second" | null
+  >("first");
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ backgroundImage: `url(${heroBackground})` }}
         />
@@ -33,15 +47,36 @@ export function HeroSection() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in">
             <span className="text-gradient-hero">PioneerX</span>
             <br />
-            <span className="text-foreground">The Future of</span>
+            <TypewriterText
+              text="The Future of"
+              speed={120}
+              delay={1000}
+              className="text-foreground"
+              showCursor={true}
+              cursorChar="|"
+              isActive={activeTypewriter === "first"}
+              onComplete={() => setActiveTypewriter("second")}
+            />
             <br />
-            <span className="text-gradient-tech">Startup Success</span>
+            <TypewriterText
+              text="Startup Success"
+              speed={120}
+              delay={2500}
+              className="text-gradient-tech"
+              showCursor={true}
+              cursorChar="|"
+              isActive={activeTypewriter === "second"}
+              onComplete={() => setActiveTypewriter(null)}
+            />
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-            Transform your startup journey with AI-powered pitch intelligence, blockchain-verified transparency, 
-            and dynamic investor matching. <span className="text-gradient-primary font-semibold">Join the revolution.</span>
+            Transform your startup journey with AI-powered pitch intelligence,
+            blockchain-verified transparency, and dynamic investor matching.{" "}
+            <span className="text-gradient-primary font-semibold">
+              Join the revolution.
+            </span>
           </p>
 
           {/* CTA Buttons */}
@@ -65,11 +100,16 @@ export function HeroSection() {
                 <h3 className="text-lg font-semibold">AI Pitch Intelligence</h3>
               </div>
               <p className="text-muted-foreground">
-                Get real-time feedback and success predictions for your pitch with our advanced AI engine.
+                Get real-time feedback and success predictions for your pitch
+                with our advanced AI engine.
               </p>
               <div className="mt-4 flex items-center gap-2">
-                <Badge variant="secondary" className="text-xs">95% Accuracy</Badge>
-                <Badge variant="secondary" className="text-xs">Real-time</Badge>
+                <Badge variant="secondary" className="text-xs">
+                  95% Accuracy
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  Real-time
+                </Badge>
               </div>
             </Card>
 
@@ -78,14 +118,21 @@ export function HeroSection() {
                 <div className="w-12 h-12 bg-gradient-success rounded-xl flex items-center justify-center glow-tech">
                   <Shield className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold">Blockchain Verification</h3>
+                <h3 className="text-lg font-semibold">
+                  Blockchain Verification
+                </h3>
               </div>
               <p className="text-muted-foreground">
-                Transparent, tamper-proof verification of startup metrics and investor credentials.
+                Transparent, tamper-proof verification of startup metrics and
+                investor credentials.
               </p>
               <div className="mt-4 flex items-center gap-2">
-                <Badge variant="secondary" className="text-xs">Immutable</Badge>
-                <Badge variant="secondary" className="text-xs">Transparent</Badge>
+                <Badge variant="secondary" className="text-xs">
+                  Immutable
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  Transparent
+                </Badge>
               </div>
             </Card>
 
@@ -97,11 +144,16 @@ export function HeroSection() {
                 <h3 className="text-lg font-semibold">Smart Matching</h3>
               </div>
               <p className="text-muted-foreground">
-                AI-powered connections between startups, investors, and mentors based on deep compatibility analysis.
+                AI-powered connections between startups, investors, and mentors
+                based on deep compatibility analysis.
               </p>
               <div className="mt-4 flex items-center gap-2">
-                <Badge variant="secondary" className="text-xs">AI-Powered</Badge>
-                <Badge variant="secondary" className="text-xs">Global Network</Badge>
+                <Badge variant="secondary" className="text-xs">
+                  AI-Powered
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  Global Network
+                </Badge>
               </div>
             </Card>
           </div>
@@ -109,19 +161,43 @@ export function HeroSection() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-card-border">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-primary mb-2">$2.4B+</div>
-              <div className="text-sm text-muted-foreground">Funding Raised</div>
+              <AnimatedCounter
+                value={2.4}
+                prefix="$"
+                suffix="B+"
+                duration={2500}
+                decimals={1}
+                className="text-3xl md:text-4xl font-bold text-gradient-primary mb-2"
+              />
+              <div className="text-sm text-muted-foreground">
+                Funding Raised
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-tech mb-2">15K+</div>
+              <AnimatedCounter
+                value={15}
+                suffix="K+"
+                duration={2000}
+                className="text-3xl md:text-4xl font-bold text-gradient-tech mb-2"
+              />
               <div className="text-sm text-muted-foreground">Startups</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-success mb-2">850+</div>
+              <AnimatedCounter
+                value={850}
+                suffix="+"
+                duration={1800}
+                className="text-3xl md:text-4xl font-bold text-gradient-success mb-2"
+              />
               <div className="text-sm text-muted-foreground">Investors</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-hero mb-2">97%</div>
+              <AnimatedCounter
+                value={97}
+                suffix="%"
+                duration={2200}
+                className="text-3xl md:text-4xl font-bold text-gradient-hero mb-2"
+              />
               <div className="text-sm text-muted-foreground">Success Rate</div>
             </div>
           </div>

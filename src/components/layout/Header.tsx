@@ -36,9 +36,9 @@ export function Header() {
             <a href="#platform" className="text-muted-foreground hover:text-foreground transition-colors">
               Platform
             </a>
-            <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+            {/* <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
               Pricing
-            </a>
+            </a> */}
             <div className="flex items-center gap-2">
               <Zap className="w-4 h-4 text-tech" />
               <span className="text-sm font-medium text-tech">AI Powered</span>

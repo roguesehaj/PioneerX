@@ -9,15 +9,21 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-primary text-primary-foreground hover:scale-105 hover:shadow-lg hover:shadow-primary/25",
-        hero: "bg-gradient-hero text-primary-foreground hover:scale-105 glow-primary font-semibold border border-primary/20",
+        default:
+          "bg-gradient-primary text-primary-foreground hover:scale-105 hover:shadow-lg hover:shadow-primary/25",
+        hero: "bg-gradient-hero text-primary-foreground hover:scale-105 glow-primary font-semibold",
         tech: "bg-gradient-tech text-primary-foreground hover:scale-105 glow-tech font-medium",
-        success: "bg-gradient-success text-primary-foreground hover:scale-105 glow-accent font-medium",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 hover:scale-105",
-        outline: "border border-card-border bg-card/50 backdrop-blur-sm text-foreground hover:bg-card hover:scale-105 hover:border-primary/30",
-        ghost: "text-muted-foreground hover:bg-card hover:text-foreground hover:scale-105",
+        success:
+          "bg-gradient-success text-primary-foreground hover:scale-105 glow-accent font-medium",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 hover:scale-105",
+        outline:
+          "border border-card-border bg-card/50 backdrop-blur-sm text-foreground hover:bg-card hover:scale-105 hover:border-primary/30",
+        ghost:
+          "text-muted-foreground hover:bg-card hover:text-foreground hover:scale-105",
         link: "text-primary underline-offset-4 hover:underline hover:text-primary-glow",
-        premium: "bg-gradient-accent text-accent-foreground hover:scale-105 glow-accent font-semibold border border-accent/20",
+        premium:
+          "bg-gradient-accent text-accent-foreground hover:scale-105 glow-accent font-semibold",
       },
       size: {
         default: "h-11 px-6 py-2",
@@ -31,7 +37,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 export interface ButtonProps
@@ -43,8 +49,14 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
-  },
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
 );
 Button.displayName = "Button";
 

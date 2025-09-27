@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 /* PioneerX Design System - Futuristic Startup Ecosystem Platform */
+* {
+  scroll-behavior: smooth;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 @layer base {
   :root {
@@ -64,12 +67,38 @@
     --radius-xl: 24px;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
-    --gradient-tech: linear-gradient(135deg, hsl(var(--tech)), hsl(var(--tech-glow)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--tech)) 50%, hsl(var(--accent)) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--card)) 50%, hsl(220 13% 14%) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow))
+    );
+    --gradient-success: linear-gradient(
+      135deg,
+      hsl(var(--success)),
+      hsl(var(--success-glow))
+    );
+    --gradient-tech: linear-gradient(
+      135deg,
+      hsl(var(--tech)),
+      hsl(var(--tech-glow))
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(var(--accent)),
+      hsl(var(--accent-glow))
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--tech)) 50%,
+      hsl(var(--accent)) 100%
+    );
+    --gradient-card: linear-gradient(
+      135deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--card)) 50%,
+      hsl(220 13% 14%) 100%
+    );
 
     /* Shadows & Effects */
     --shadow-glow: 0 0 50px hsl(var(--primary) / 0.3);
@@ -144,17 +173,28 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  /* Remove border from gradient buttons to prevent whitish sides */
+  button[class*="bg-gradient-"] {
+    border: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 
   .font-mono {
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
   }
 }
 
@@ -255,7 +295,7 @@
     background-clip: text;
   }
 
-   /* .text-gradient-tech {
+  /* .text-gradient-tech {
     background: var(--gradient-tech);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -266,7 +306,8 @@
 @layer utilities {
   /* Custom Keyframes */
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -275,7 +316,8 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow: var(--shadow-glow);
     }
     50% {
@@ -304,13 +346,46 @@
   }
 
   @keyframes gradient-xy {
-    0%, 100% {
+    0%,
+    100% {
       background-size: 400% 400%;
       background-position: left center;
     }
     50% {
       background-size: 200% 200%;
       background-position: right center;
+    }
+  }
+
+  /* Typewriter cursor animation */
+  @keyframes typewriter-cursor {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .typewriter-cursor {
+    animation: typewriter-cursor 1s infinite;
+  }
+
+  /* Smooth typewriter reveal */
+  .typewriter-reveal {
+    animation: typewriter-reveal 0.1s ease-in-out;
+  }
+
+  @keyframes typewriter-reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

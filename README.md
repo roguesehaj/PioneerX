@@ -1,9 +1,5 @@
 # PioneerX - The Ultimate Startup Ecosystem Platform 🚀
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](./CONTRIBUTING.md)
-
 > A comprehensive, AI-powered platform that combines a Pitch Intelligence Engine, a Blockchain-Verified Ecosystem, and a Dynamic Success Simulator to revolutionize the startup world.
 
 PioneerX is a revolutionary networking ecosystem designed to solve the critical pain points in the startup lifecycle. We're democratizing access to venture capital, eliminating fraud, and empowering founders with the tools they need to succeed.
